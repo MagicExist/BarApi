@@ -10,9 +10,9 @@ namespace Domain.Repository
         //Add a new beer
         public Beer AddBeer(Beer beer);
         //Update a beer
-        public Task<Beer> UpdateBeerAsync(Beer beer);
+        public Task<(Beer,Beer)> UpdateBeerAsync(Beer beer);
         //Delete a beer
-        public bool DeleteBeer(Beer beer);
+        public Task<bool> DeleteBeerAsync(Beer beer);
         //Filter Beers by brand
         public Task<Beer[]> GetBeersByBrandAsync(string brandName);
     }
