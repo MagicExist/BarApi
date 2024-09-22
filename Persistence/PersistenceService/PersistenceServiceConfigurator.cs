@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Persistence.PersistenceService
 {
-    public static class PersistenceConfiguratorService
+    public static class PersistenceServiceConfigurator
     {
         public static IServiceCollection PersistenceService(this IServiceCollection serivce, IConfiguration configuration)
         {
