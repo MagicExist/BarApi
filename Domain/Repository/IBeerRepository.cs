@@ -12,7 +12,7 @@ namespace Domain.Repository
         //Update a beer
         public Task<Beer> UpdateBeerAsync(Beer beer);
         //Delete a beer
-        public Task<bool> DeleteBeerAsync(Beer beer);
+        public bool DeleteBeer(Beer beer);
         //Filter Beers by brand
         public Task<Beer[]> GetBeersByBrandAsync(string brandName);
     }
