@@ -13,15 +13,15 @@ namespace Persistence.Repositories
         {
             _dbContextBeer = dbContextBeer;
         }
-        public Task<Beer[]> GetAllBeersAsync()
+        public async Task<Beer[]> GetAllBeersAsync()
         {
-            return _dbContextBeer.Beers.AsNoTracking().ToArrayAsync();
+            return await _dbContextBeer.Beers.AsNoTracking().ToArrayAsync();
         }
 
-        public Beer AddBeer(Beer beer)
+        public async Task<Beer> AddBeerAsync(Beer beer)
         {
-            _dbContextBeer.Beers.Add(beer);
-            _dbContextBeer.SaveChanges();
+            await _dbContextBeer.Beers.AddAsync(beer);
+            await _dbContextBeer.SaveChangesAsync();
             return beer;
         }
 
