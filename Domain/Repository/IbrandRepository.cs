@@ -12,10 +12,10 @@ namespace Domain.Repository
         //Get all brands
         public Task<Brand[]> GetAllBrandsAsync();
         //Add a new brand
-        public Task<Brand> AddBrandAsync();
+        public Task<Brand> AddBrandAsync(Brand brand);
         //Update an existing brand
-        public Task<Brand> UpdateBrandAsync();
+        public Task<(Brand, Brand)> UpdateBrandAsync(Brand brand);
         //Delete one brand
-        public Task<bool> DeleteBrandAsync();
+        public Task<bool> DeleteBrandAsync(Brand brand);
     }
 }
